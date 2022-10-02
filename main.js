@@ -8,3 +8,13 @@ function startGame() {
     // 2. 타이머 시작
 
 }
+
+function clickCarrot(){
+    // 1. 당근이 없어짐
+    
+    // 2. 당근 count 줄어듦
+}
+
+function clickBug(){
+    // You Lose 나타남
+}
