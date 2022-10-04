@@ -6,18 +6,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>carrot_minigame</title>
     <link rel="stylesheet" href="main.css">
-    <script src="main.js"></script>
+    <script src="main.js" defer></script>
     <script src="https://kit.fontawesome.com/ee20ae7385.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <div class="wrap">
-        <img src="/img/background.png" alt="배경화면" width="900" height="500">
-        <div class="top">
-            <i class="fa-solid fa-play"></i>
-            <p class="timer">0:10</p>
-            <p class="count">10</p>
-        </div>
-        <div class="bottom"></div> <!--js에서 추가-->
-    </div>
+    <section class="game">
+        <header class="game_header">
+            <button class="game_button">
+                <i class="fa-solid fa-play"></i>
+            </button>
+            <span class="game_timer"></span>
+            <span class="game_score"></span>
+        </header>
+        <section class="game_field"></section>
+    </section>
+    <section class="pop-up pop-up--hide">
+        <button class="pop-up_refresh">
+            <i class="fa-solid fa-rotate-right"></i>
+        </button>
+        <span class="pop-up_message">Hello</span>
+    </section>
 </body>
 </html>

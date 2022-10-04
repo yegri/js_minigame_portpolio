@@ -1,17 +1,15 @@
 @charset "utf-8";
 
 /*배경화면*/
-.wrap {
+.game {
+    background: url(img/background.png) center/cover;
     width: 900px;
     height: 500px;
     margin: 50px auto;
     position: relative;
-}
-.wrap img{
     border-radius: 30px;
 }
-
-.top{ /*버튼, 타이머, 카운트 전체*/
+.game_header{ /*버튼, 타이머, 카운트 전체*/
     width: 900px;
     height: 200px;
     text-align: center;
@@ -19,27 +17,34 @@
     top: 10px;
     left: 0;
 }
-.top i{ /*재생, 정지버튼*/
+.game_button{ /*재생, 정지버튼*/
     border: 2px solid black;
     border-radius: 10px;
-    padding: 10px;
     font-size: 20px;
-    width: 15px;
-    height: 15px;
-    line-height: 15px;
+    width: 40px;
+    height: 40px;
+    line-height: 37px;
+    text-align: center;
     background-color: beige;
+    transition: transform 0.5s ease-in;
+    cursor: pointer;
 }
-.top .timer{
+.game_button:hover{
+    transform: scale(1.1);
+}
+.game_timer{
+    display: block;
     border: 2px solid black;
     border-radius: 5px;
-    width: 90px;
+    width: 100px;
     height: 25px;
     margin: 5px auto;
     font-size: 20px;
     line-height: 23px;
     background-color: white;
 }
-.top .count{
+.game_score{
+    display: block;
     border: 2px solid black;
     border-radius: 50%;
     width: 40px;
@@ -51,11 +56,42 @@
     color: white;
     padding: 2px;
 }
-
-.bottom{
+.game_field{
     width: 900px;
     height: 230px;
     position: absolute;
-    bottom:0;
-    left:0;
+    bottom: 0;
+    left: 0;
+}
+.pop-up{
+    display: block;
+    background-color: rgba(125,125,125,0.8);
+    width: 400px;
+    height: 150px;
+    border-radius: 30px;
+    position: absolute;
+    bottom: 40%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+.pop-up--hide{
+    display: none;
+}
+.pop-up_refresh{ /*다시시작 버튼*/
+    border: 2px solid black;
+    border-radius: 10px;
+    font-size: 30px;
+    width: 50px;
+    height: 50px;
+    line-height: 37px;
+    text-align: center;
+    background-color: beige;
+    margin-top: 20px;
+}
+.pop-up_message{
+    display: block;
+    color: white;
+    margin-top: 5px;
+    font-size: 40px;
 }
