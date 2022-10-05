@@ -1,5 +1,9 @@
 @charset "utf-8";
 
+body{
+    background-color: black;
+}
+
 /*배경화면*/
 .game {
     background: url(img/background.png) center/cover;
@@ -26,11 +30,7 @@
     line-height: 37px;
     text-align: center;
     background-color: beige;
-    transition: transform 0.5s ease-in;
     cursor: pointer;
-}
-.game_button:hover{
-    transform: scale(1.1);
 }
 .game_timer{
     display: block;
@@ -42,6 +42,9 @@
     font-size: 20px;
     line-height: 23px;
     background-color: white;
+    visibility: hidden;
+    user-select:none;
+    cursor: auto;
 }
 .game_score{
     display: block;
@@ -55,6 +58,9 @@
     background-color: #D2D2FF;
     color: white;
     padding: 2px;
+    visibility: hidden;
+    user-select:none;
+    cursor: auto;
 }
 .game_field{
     width: 900px;
@@ -94,4 +100,10 @@
     color: white;
     margin-top: 5px;
     font-size: 40px;
+}
+.carrot, .bug{
+    transition: transform 100ms ease-in;
+}
+.carrot:hover, .bug:hover{
+    transform: scale(1.1);
 }
