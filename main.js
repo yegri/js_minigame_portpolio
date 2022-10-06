@@ -35,7 +35,6 @@ gameBtn.addEventListener('click',() => {
     }else{
         startGame();
     }
-    started = !started; //게임이 중지되었으므로 started를 반대로 바꿔주기
 });
 popUpRefresh.addEventListener('click',() => {
     startGame();
